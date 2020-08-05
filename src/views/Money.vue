@@ -1,7 +1,6 @@
 <template>
   <div>
-    M
-    <Nav />
+    <Layout>M</Layout>
   </div>
 </template>
 
