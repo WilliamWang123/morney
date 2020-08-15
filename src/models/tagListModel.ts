@@ -21,7 +21,7 @@ const tagListModel: TagListModel = {
     );
     return this.data;
   },
-  create(name: string) {
+  create(name) {
     // this.data = [{id:'1',name:'1'},{id:'2',name:'2'}]
 
     const names = this.data.map(item => item.name)
