@@ -7,7 +7,7 @@ const store = {
 
 };
 
-console.log();
+
 
 
 export default store;
