@@ -73,11 +73,11 @@ export default class Statistics extends Vue {
       // this.recordList = [{date:7.3, value:100}, {date:7.2, value:200}]
       const dateString = day(today).subtract(i, "day").format("YYYY-MM-DD");
       const found = _.find(this.recordList, {
-        createdAt: dateString,
+        createAt: dateString,
       });
       array.push({
         date: dateString,
-        value: found ? found : 0,
+        value: found ? found.amount : 0,
       });
     }
     array.sort((a, b) => {
@@ -107,11 +107,6 @@ export default class Statistics extends Vue {
           alignWithLabel: true,
         },
         axisLine: { lineStyle: { color: "#666" } },
-        axisLabel: {
-          formatter: function (value: string, index: number) {
-            return value.substr(5);
-          },
-        },
       },
       yAxis: {
         type: "value",
