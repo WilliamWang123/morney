@@ -72,12 +72,12 @@ export default class Statistics extends Vue {
     for (let i = 0; i <= 29; i++) {
       // this.recordList = [{date:7.3, value:100}, {date:7.2, value:200}]
       const dateString = day(today).subtract(i, "day").format("YYYY-MM-DD");
-      const found = _.find(this.recordList, {
-        createAt: dateString,
+      const found = _.find(this.groupedList, {
+        title: dateString,
       });
       array.push({
         key: dateString,
-        value: found ? found.amount : 0,
+        value: found ? found.total : 0,
       });
     }
     array.sort((a, b) => {
